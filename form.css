@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+.content{
+    max-width:400px;
+    margin:0 auto;
+    background-color: rgb(128, 128, 128,0.1);
+    box-shadow: 0 0 5px gray;
+    padding:10px;
+}
+h4{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*border: 1px solid gray;*/
+}
+.col{
+    flex-grow: 1;
+   /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-group{
+   /*border:1px solid green;*/
+   display:flex;
+   justify-content: flex-end;
+   margin:5px 25px 5px 5px;
+
+}
+input{
+    width: 10em;
+   
+}
+table,tr,thead,th,td{
+    border-collapse: collapse;
+    border:1px solid gray;
+}

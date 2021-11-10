@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kamatos kamat</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <div class="content">
+    <h4>Kamatos kamat számolás</h4>
+    <div class="row">
+      <form class="col">
+        <div class="form-group">
+          <label for="alap">Alap:</label>
+          <input type="text" id="alap" />
+        </div>
+
+        <div class="form-group">
+          <label for="kamat">Kamat:</label>
+          <input type="text" id="kamat" />
+        </div>
+
+        <div class="form-group">
+          <label for="ev">Ev:</label>
+          <input type="text" id="ev" />
+        </div>
+        <div class="form-group">
+          <input id="gomb" type="button" value="szamol" />
+        </div>
+      </form>
+      <div class="col">
+        <table>
+          <caption>Kamatos kamat</caption>
+          <thead>
+            <th>Év</th>
+            <th>Összeg</th>
+          </thead>
+          <tbody id="tbl"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="form.js"></script>
+</body>
+
+</html>

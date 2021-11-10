@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csá</title>
+    <style>
+        .cont{
+            display: flex;
+        }
+        body{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <div class="group">
+            <div class="cont">
+                <div class="col">
+                    <label class="lab">Név:</label>
+                    <input type="text" class="nev" id="neve" placeholder="Satya">
+                </div>
+
+                <div class="col">
+                    <label class="lab">Születési év:</label>
+                    <input type="number" class="esz" id="evsz" placeholder="2002" max="2021" min="1900">
+                </div>
+
+                <div class="col">
+                    <label class="lab">Név:</label>
+                    <input type="button" class="bt" id="btn" value="beir">
+                </div>
+
+                <div class="col">
+                    <table>
+                        <thead>
+                            <th>nev</th>
+                            <th>szulev</th>
+                        </thead>
+                        <tbody id="tb"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        let adat=[]
+        class Pers{
+            constructor(nev,szulev){
+                this.nev=nev;
+                this.szulev=szulev;
+            }
+            
+
+        }
+        document.getElementById('btn').addEventListener('click',beir)
+        function beir(){
+            let n= document.getElementById('neve').value
+            let m= document.getElementById('evsz').value
+            adat.push(new Pers(n,m))
+            document.getElementById('tb').innerHTML=""
+            for(let elem of adat){
+                document.getElementById('tb').innerHTML+=`<tr><td>${elem.nev}</td><td>${elem.szulev}</td></tr>`
+            }
+        }
+    </script>
+</body>
+</html>
